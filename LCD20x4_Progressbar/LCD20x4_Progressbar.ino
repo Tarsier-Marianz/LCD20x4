@@ -35,14 +35,14 @@ void intialize(long delayTime) {
 
   //Iterate through each character on the second line
   for (int i = 0; i < lcdCols; i++) {
-    int percent = (100.0 * i) / lcdCols;  //let calculate percentage by current column index
+    int percent = (100.0 * i) / lcdCols;  //lets calculate percentage by current column index
     lcd.setCursor(0, 0);
     lcd.print("Initializing...");
     //lcd.setCursor(16, 0);
     lcd.print(percent);
     lcd.print("%");
 
-    //Move cursor to second line
+    //Move cursor to second line where progressbar rows created
     lcd.setCursor(0, 1);
     //Iterate through each progress value for each character
     for (int j = 0; j < 5; j++) {

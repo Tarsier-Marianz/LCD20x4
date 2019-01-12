@@ -2,8 +2,8 @@
 
 LiquidCrystal lcd(12, 11, 5, 4, 3, 2); // -- creating LCD instance
 
-int lcdCols = 20;
-int lcdRows = 4;
+int lcdCols = 16;
+int lcdRows = 2;
 unsigned long startTime, finishedTime, elapsedTime;
 
 //Create the progress bar characters
@@ -56,10 +56,12 @@ void intialize(long delayTime) {
 }
 
 void loop() {
+  intialize(elapsedTime);
   lcd.home();
   lcd.print("Finished...");
   lcd.print(elapsedTime);
   lcd.print("ms");
+   delay(1000);
 }
 
 
